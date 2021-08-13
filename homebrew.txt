@@ -1,0 +1,16 @@
+asdf
+cmake
+ghq
+git
+go
+gradle
+heroku
+kubectx
+kubernetes-cli
+kubernetes-helm
+openjdk
+peco
+php
+tfenv
+tflint
+zsh-completions
