@@ -421,6 +421,10 @@ shell:
  program: /bin/zsh
  args:
    - --login
+# Windows
+# program: wsl.exe
+#   args:
+#     - ~ -d Ubuntu-20.04
 
 # Startup directory
 #
@@ -510,8 +514,8 @@ shell:
 # And optionally:
 #
 # - `mods` (see key bindings)
-#mouse_bindings:
-#  - { mouse: Middle, action: PasteSelection }
+mouse_bindings:
+  - { mouse: Right, action: PasteSelection }
 
 # Key bindings
 #
