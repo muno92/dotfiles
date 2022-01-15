@@ -431,9 +431,9 @@ shell:
  args:
    - --login
 # Windows
-# program: wsl.exe
+# program: wsl
 #   args:
-#     - ~ -d Ubuntu-20.04
+#     - '~'
 
 # Startup directory
 #
