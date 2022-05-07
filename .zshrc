@@ -20,6 +20,9 @@ alias sleepoff='sudo pmset -a disablesleep 1'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ "${ENABLE_POWERLEVEL10K}" = 'true ' ]] && [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
