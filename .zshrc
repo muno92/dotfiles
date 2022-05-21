@@ -1,6 +1,9 @@
  # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 
+autoload -U compinit
+compinit
+
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 eval "$(direnv hook zsh)"
 setopt share_history
