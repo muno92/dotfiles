@@ -15,5 +15,8 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
+# プロンプトにユーザー名・PC名が表示されなくなれさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
+export PROMPT='%~ %F{yellow}>%f '
+
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
