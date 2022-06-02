@@ -23,7 +23,7 @@ export PROMPT='%~ %F{yellow}>%f '
 
 function fdc() {
     local service=$(docker compose ps --services | fzf --exit-0)
-    [[ -n ${service} ]] && docker compose exec ${service}  bash
+    [[ -n ${service} ]] && docker compose exec ${service} bash
 }
 
 # Fig post block. Keep at the bottom of this file.
