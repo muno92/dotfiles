@@ -1,0 +1,6 @@
+# このファイルへのシンボリックリンクをホームディレクトリに設置する
+[include]
+    # ユーザー情報
+    path = ~/.gitconfig.user
+    # ユーザー情報以外の設定値
+    path = ~/workspace/dotfiles/.gitconfig.settings

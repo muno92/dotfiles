@@ -1,0 +1,6 @@
+[core]
+	autocrlf = input
+[ghq]
+    root = ~/workspace
+[push]
+    autoSetupRemote = true
