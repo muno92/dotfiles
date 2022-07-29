@@ -24,7 +24,7 @@ export PROMPT='%~ %F{yellow}>%f '
 function fdc() {
     local service=$(docker compose ps --services --status running | fzf --exit-0 --header='Select Container')
     [[ -n ${service} ]] || return
-    local shell=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells | fzf --exit-0 --header='Select Shell')
+    local shell=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells | fzf --exact --exit-0 --header='Select Shell')
     [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
 }
 
