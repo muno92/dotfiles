@@ -22,8 +22,10 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 export PROMPT='%~ %F{yellow}>%f '
 
 function fdc() {
-    local service=$(docker compose ps --services | fzf --exit-0)
-    [[ -n ${service} ]] && docker compose exec ${service} bash
+    local service=$(docker compose ps --services | fzf --exit-0 --header='Select Container')
+    [[ -n ${service} ]] || return
+    local shell=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells | fzf --exit-0 --header='Select Shell')
+    [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
 }
 
 # Fig post block. Keep at the bottom of this file.
