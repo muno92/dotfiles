@@ -28,7 +28,7 @@ function fdc() {
     [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
 }
 
+alias dc='docker compose'
+
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
-
-alias dc='docker compose'
