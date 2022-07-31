@@ -47,6 +47,7 @@ function pdce() {
 }
 
 alias dc='docker compose'
+alias e='exa'
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
