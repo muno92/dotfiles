@@ -34,20 +34,6 @@ function dce() {
     [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
 }
 
-function pdce() {
-    local services=$(docker compose ps --services --status running)
-    [[ -n ${services} ]] || return
-
-    local service=$(echo ${services} | peco --select-1 --prompt 'Select Container >')
-    [[ -n ${service} ]] || return
-
-    local shells=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells)
-    [[ -n ${shells} ]] || return
-
-    local shell=$(echo ${shells} | peco --select-1 --prompt 'Select Shell >')
-    [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
-}
-
 alias dc='docker compose'
 alias e='exa'
 
