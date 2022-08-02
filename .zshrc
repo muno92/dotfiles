@@ -21,7 +21,7 @@ export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 
-# プロンプトにユーザー名・PC名が表示されなくなれさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
+# プロンプトにユーザー名・PC名が表示されなくなりさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
 export PROMPT='%~ %F{yellow}>%f '
 
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
