@@ -28,9 +28,16 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # docker composeで起動したコンテナに簡単にログインするための関数
 function dce() {
-    local service=$(docker compose ps --services --status running | fzf --exit-0 --header='Select Container')
+    local services=$(docker compose ps --services --status running)
+    [[ -n ${services} ]] || return
+
+    local service=$(echo ${services} | peco --select-1 --prompt 'Select Container >')
     [[ -n ${service} ]] || return
-    local shell=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells | fzf --exact --exit-0 --header='Select Shell')
+
+    local shells=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells)
+    [[ -n ${shells} ]] || return
+
+    local shell=$(echo ${shells} | peco --select-1 --prompt 'Select Shell >')
     [[ -n ${shell} ]] && docker compose exec ${service} ${shell}
 }
 
