@@ -34,6 +34,7 @@ function dce() {
     local service=$(echo ${services} | peco --select-1 --prompt 'Select Container >')
     [[ -n ${service} ]] || return
 
+    # コンテナによってはbashが使えないので、シェルも選択式にする
     local shells=$(docker compose exec ${service} grep -E '^[a-z/]+$' /etc/shells)
     [[ -n ${shells} ]] || return
 
