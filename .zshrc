@@ -46,7 +46,7 @@ alias e='exa'
 # コマンド実行履歴をzsh標準機能ではなくpecoで検索出来るようにする
 function peco-history-selection() {
     # Macのhistoryなら-rで逆順に出来るが、他のOSでも動くようにしておく
-    BUFFER=`\history -n 1 | tac | awk '!a[$0]++' | peco`
+    BUFFER=$(\history -n 1 | tac | awk '!a[$0]++' | peco)
     CURSOR=$#BUFFER
     zle reset-prompt
 }
