@@ -24,8 +24,6 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 # プロンプトにユーザー名・PC名が表示されなくなりさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
 export PROMPT='%~ %F{yellow}>%f '
 
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-
 # docker composeで起動したコンテナに簡単にログインするための関数
 function dce() {
     local services=$(docker compose ps --services --status running)
