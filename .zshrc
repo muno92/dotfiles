@@ -67,7 +67,7 @@ alias e='exa'
 function peco-history-selection() {
     # zshのhistoryなら-rで逆順に出来る
     # https://linux.die.net/man/1/zshbuiltins
-    BUFFER=$(\history -r -n 1 | awk '!a[$0]++' | peco)
+    BUFFER=$(\history -r -n 1 | awk '!a[$0]++' | peco --query "$LBUFFER")
     CURSOR=$#BUFFER
     zle reset-prompt
 }
