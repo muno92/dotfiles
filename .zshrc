@@ -1,7 +1,8 @@
  # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
 
-autoload -U compinit
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+autoload -Uz compinit
 compinit
 
 # cdr
