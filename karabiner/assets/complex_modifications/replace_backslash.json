@@ -1,0 +1,20 @@
+{
+    "title": "Replace underscore to backslash",
+    "rules": [
+        {
+            "description": "Replace underscore to backslash",
+            "manipulators": [
+                {
+                    "from": {
+                        "key_code": "international1"
+                    },
+                    "to": [{
+                        "key_code": "international3",
+                        "modifiers": [ "option" ]
+                    }],
+                    "type": "basic"
+                }
+            ]
+        }
+    ]
+}
