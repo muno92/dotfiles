@@ -41,6 +41,7 @@ alias sleepoff='sudo pmset -a disablesleep 1'
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+alias date='gdate'
 
 # プロンプトにユーザー名・PC名が表示されなくなりさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
 export PROMPT='%~ %F{yellow}>%f '
