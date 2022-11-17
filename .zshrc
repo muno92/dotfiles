@@ -77,5 +77,8 @@ function peco-history-selection() {
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
 
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
