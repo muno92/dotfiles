@@ -96,6 +96,8 @@ window:
 
   opacity: 0.85
 
+  option_as_alt: Both
+
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -437,9 +439,6 @@ shell:
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
 #working_directory: None
-
-# Send ESC (\x1b) before characters when alt is pressed.
-alt_send_esc: false
 
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
