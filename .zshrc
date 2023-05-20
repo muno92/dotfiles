@@ -80,5 +80,7 @@ bindkey '^R' peco-history-selection
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
+source ~/.config/op/plugins.sh
+
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
