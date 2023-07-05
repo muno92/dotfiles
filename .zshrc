@@ -1,7 +1,18 @@
- # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
+IS_MAC='false'
+if [[ $(uname) == 'Linux' ]]; then
+    # brew --prefixは実行に時間が掛かるので固定値で持つ
+    BREW_PREFIX='/home/linuxbrew/.linuxbrew'
+else
+    BREW_PREFIX='/opt/homebrew'
+    IS_MAC='true'
+fi
 
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+if [[ ${IS_MAC} == 'true' ]]; then
+     # Fig pre block. Keep at the top of this file.
+    . "$HOME/.fig/shell/zshrc.pre.zsh"
+fi
+
+fpath=(${BREW_PREFIX}/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
 
@@ -26,7 +37,7 @@ zle -N peco-cdr
 bindkey '^Y' peco-cdr
 
 # 便利ツール
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. ${BREW_PREFIX}/opt/asdf/libexec/asdf.sh
 eval "$(direnv hook zsh)"
 
 # historyを見やすくする
@@ -34,14 +45,9 @@ setopt share_history
 setopt extended_history
 alias history='history -i'
 
-alias sleepon='sudo pmset -a disablesleep 0'
-alias sleepoff='sudo pmset -a disablesleep 1'
-
-# 各種GNU系コマンドを優先して使うようにする
-export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-alias date='gdate'
+if [[ ${IS_MAC} == 'true' ]]; then
+    . ~/.zshrc_mac
+fi
 
 # プロンプトにユーザー名・PC名が表示されなくなりさえすれば良いので、pureを使うのでは無くPROMPTをカスタマイズする
 export PROMPT='%~ %F{yellow}>%f '
@@ -87,5 +93,7 @@ export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+if [[ ${IS_MAC} == 'true' ]]; then
+    # Fig post block. Keep at the bottom of this file.
+    . "$HOME/.fig/shell/zshrc.post.zsh"
+fi

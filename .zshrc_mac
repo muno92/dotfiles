@@ -1,0 +1,8 @@
+alias sleepon='sudo pmset -a disablesleep 0'
+alias sleepoff='sudo pmset -a disablesleep 1'
+
+# 各種GNU系コマンドを優先して使うようにする
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+alias date='gdate'
