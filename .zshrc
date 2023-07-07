@@ -87,9 +87,6 @@ bindkey '^R' peco-history-selection
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
 
-# 1password CLIとGitHub CLIを連携
-source ~/.config/op/plugins.sh
-
 export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
