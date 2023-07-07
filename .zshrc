@@ -2,10 +2,10 @@ IS_MAC='false'
 if [[ $(uname) == 'Linux' ]]; then
     # brew --prefixは実行に時間が掛かるので固定値で持つ
     BREW_PREFIX='/home/linuxbrew/.linuxbrew'
+    eval "$(/home/linubrew.linuxbrew/bin/brew shellenv)"
 else
     BREW_PREFIX='/opt/homebrew'
     IS_MAC='true'
-    eval "$(/home/linubrew.linuxbrew/bin/brew shellenv)"
 fi
 
 if [[ ${IS_MAC} == 'true' ]]; then
