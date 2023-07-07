@@ -5,6 +5,7 @@ if [[ $(uname) == 'Linux' ]]; then
 else
     BREW_PREFIX='/opt/homebrew'
     IS_MAC='true'
+    eval "$(/home/linubrew.linuxbrew/bin/brew shellenv)"
 fi
 
 if [[ ${IS_MAC} == 'true' ]]; then
