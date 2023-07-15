@@ -42,6 +42,9 @@ bindkey '^Y' peco-cdr
 eval "$(direnv hook zsh)"
 
 # historyを見やすくする
+export SAVEHIST=1000
+export HISTSIZE=2000
+export HISTFILE="${HOME}/.zsh_history"
 setopt share_history
 setopt extended_history
 alias history='history -i'
