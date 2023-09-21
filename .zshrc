@@ -94,6 +94,8 @@ export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
 
+export LESS='-g -i -M -R'
+
 if [[ ${IS_MAC} == 'true' ]]; then
     # Fig post block. Keep at the bottom of this file.
     . "$HOME/.fig/shell/zshrc.post.zsh"
