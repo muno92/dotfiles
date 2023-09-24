@@ -68,7 +68,20 @@ function dce() {
     local shells=$(docker compose exec "${service}" grep -E '^[a-z/]+$' /etc/shells)
     [[ -n ${shells} ]] || return
 
-    local shell=$(echo "${shells}" | peco --select-1 --prompt 'Select Shell >')
+    local shell=''
+    if [[ $shells =~ /zsh ]]; then
+        echo 'Use zsh'
+        shell='zsh'
+    elif [[ $shells =~ /bash ]]; then
+        echo 'Use bash'
+        shell='bash'
+    elif [[ $shells =~ /sh ]]; then
+        echo 'Use sh'
+        shell='sh'
+    else
+        shell=$(echo "${shells}" | peco --select-1 --prompt 'Select Shell >')
+    fi
+
     [[ -n ${shell} ]] && docker compose exec "${service}" "${shell}"
 }
 
