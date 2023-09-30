@@ -86,7 +86,7 @@ function dce() {
 }
 
 alias dc='docker compose'
-alias e='exa'
+alias e='eza'
 
 # コマンド実行履歴をzsh標準機能ではなくpecoで検索出来るようにする
 function peco-history-selection() {
