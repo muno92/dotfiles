@@ -106,6 +106,7 @@ export PATH="$GOPATH/bin:$PATH"
 export WASMTIME_HOME="$HOME/.wasmtime"
 
 export PATH="$WASMTIME_HOME/bin:$PATH"
+export PATH="$BREW_PREFIX/opt/curl/bin:$PATH"
 
 export LESS='-g -i -M -R'
 
