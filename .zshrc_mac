@@ -8,4 +8,4 @@ export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
 alias date='gdate'
 
 # 1password CLIとGitHub CLIを連携
-source ~/.config/op/plugins.sh
+# source ~/.config/op/plugins.sh
