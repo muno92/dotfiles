@@ -110,6 +110,9 @@ export PATH="$BREW_PREFIX/opt/curl/bin:$PATH"
 
 export LESS='-g -i -M -R'
 
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
 if [[ ${IS_MAC} == 'true' ]]; then
     # Fig post block. Keep at the bottom of this file.
     . "$HOME/.fig/shell/zshrc.post.zsh"
