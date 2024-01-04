@@ -2,7 +2,7 @@
 
 DOTFILES_DIR="${HOME}/workspace/dotfiles"
 
-ln -s "${DOTFILES_DIR}/.alacritty.yml" "${HOME}/.alacritty.yml"
+ln -s "${DOTFILES_DIR}/.alacritty.toml" "${HOME}/.alacritty.toml"
 ln -s "${DOTFILES_DIR}/.editorconfig" "${HOME}/.editorconfig"
 ln -s "${DOTFILES_DIR}/.gitconfig" "${HOME}/.gitconfig"
 ln -s "${DOTFILES_DIR}/.irbrc" "${HOME}/.irbrc"

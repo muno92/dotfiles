@@ -1,0 +1,41 @@
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[env]
+ENABLE_POWERLEVEL10K = "true"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "HackGen Console"
+
+[[keyboard.bindings]]
+chars = "\u001BH"
+key = "H"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BV"
+key = "V"
+mods = "Alt"
+
+[selection]
+save_to_clipboard = true
+
+[shell]
+args = ["--login"]
+program = "/bin/zsh"
+
+[window]
+decorations = "full"
+opacity = 0.85
+option_as_alt = "None"
+
+[window.dimensions]
+columns = 160
+lines = 50
