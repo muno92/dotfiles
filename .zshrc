@@ -8,11 +8,6 @@ else
     IS_MAC='true'
 fi
 
-if [[ ${IS_MAC} == 'true' ]]; then
-     # Fig pre block. Keep at the top of this file.
-    . "$HOME/.fig/shell/zshrc.pre.zsh"
-fi
-
 fpath=(${BREW_PREFIX}/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
@@ -112,8 +107,3 @@ export LESS='-g -i -M -R'
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-
-if [[ ${IS_MAC} == 'true' ]]; then
-    # Fig post block. Keep at the bottom of this file.
-    . "$HOME/.fig/shell/zshrc.post.zsh"
-fi
