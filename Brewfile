@@ -22,6 +22,7 @@ if RUBY_PLATFORM.downcase.include?('darwin')
     cask "alacritty"
     cask "alfred"
     cask "font-migu-1p"
+    cask "orbstack"
 end
 
 brew "act"
@@ -51,6 +52,7 @@ brew "netpbm"
 brew "librsvg"
 brew "graphviz"
 brew "helm"
+brew "jnv"
 brew "jq"
 brew "k6"
 brew "kubectx"
