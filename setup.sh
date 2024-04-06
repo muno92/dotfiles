@@ -15,4 +15,8 @@ if [[ $(uname) == 'Darwin' ]]; then
 else
     mkdir -p "${HOME}/.config/environment.d"
     ln -s "${DOTFILES_DIR}/.config/environment.d/im.conf" "${HOME}/.config/environment.d/im.conf"
+    mkdir -p "${HOME}/.xmonad"
+    ln -s "${DOTFILES_DIR}/.xmonad/xmonad.hs" "${HOME}/.xmonad/xmonad.hs"
+    ln -s "${DOTFILES_DIR}/.xinitrc" "${HOME}/.xinitrc"
+    ln -s "${DOTFILES_DIR}/.Xresorces" "${HOME}/.Xresources"
 fi
