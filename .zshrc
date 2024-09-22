@@ -105,5 +105,7 @@ export PATH="$BREW_PREFIX/opt/curl/bin:$PATH"
 
 export LESS='-g -i -M -R'
 
-export DOTNET_ROOT=$HOME/.dotnet
+export DOTNET_ROOT=/usr/loca/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+eval $(/opt/homebrew/bin/brew shellenv)
