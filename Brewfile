@@ -85,3 +85,5 @@ brew "heroku/brew/heroku"
 brew "kateinoigakukun/wasi-vfs/wasi-vfs"
 brew "romkatv/powerlevel10k/powerlevel10k"
 brew "symfony-cli/tap/symfony-cli"
+brews "noborus/tap/trdsql"
+
