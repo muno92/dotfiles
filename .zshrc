@@ -7,6 +7,8 @@ else
     IS_MAC='true'
 fi
 
+eval $(${BREW_PREFIX}/bin/brew shellenv)
+
 fpath=(${BREW_PREFIX}/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
@@ -106,5 +108,3 @@ export LESS='-g -i -M -R'
 
 export DOTNET_ROOT=/usr/loca/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-
-eval $(${BREW_PREFIX}/bin/brew shellenv)
