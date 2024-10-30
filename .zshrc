@@ -2,7 +2,6 @@ IS_MAC='false'
 if [[ $(uname) == 'Linux' ]]; then
     # brew --prefixは実行に時間が掛かるので固定値で持つ
     BREW_PREFIX='/home/linuxbrew/.linuxbrew'
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 else
     BREW_PREFIX='/opt/homebrew'
     IS_MAC='true'
@@ -108,4 +107,4 @@ export LESS='-g -i -M -R'
 export DOTNET_ROOT=/usr/loca/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
-eval $(/opt/homebrew/bin/brew shellenv)
+eval $(${BREW_PREFIX}/bin/brew shellenv)
