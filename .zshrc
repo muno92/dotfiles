@@ -108,3 +108,9 @@ export LESS='-g -i -M -R'
 
 export DOTNET_ROOT=/usr/loca/share/dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
+export JAVA_HOME="${BREW_PREFIX}/opt/openjdk@17"
+export PATH="${JAVA_HOME}/bin:$PATH"
+
+export ANDROID_HOME="${HOME}/Library/Android/sdk"
+
