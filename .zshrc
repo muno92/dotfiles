@@ -114,3 +114,5 @@ export PATH="${JAVA_HOME}/bin:$PATH"
 
 export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
+export PATH="${HOME}/workspace/my-marp/bin:$PATH"
+
