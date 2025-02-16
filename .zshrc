@@ -34,7 +34,7 @@ zle -N peco-cdr
 bindkey '^Y' peco-cdr
 
 # 便利ツール
-. ${BREW_PREFIX}/opt/asdf/libexec/asdf.sh
+. ${BREW_PREFIX}/opt/asdf/share/zsh/site-functions/_asdf
 eval "$(direnv hook zsh)"
 
 # historyを見やすくする
