@@ -24,6 +24,16 @@ chars = "\u001BV"
 key = "V"
 mods = "Alt"
 
+[[keyboard.bindings]]
+key = "Semicolon"
+mods = "Control"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "Minus"
+mods = "Control"
+action = "DecreaseFontSize"
+
 [selection]
 save_to_clipboard = true
 
