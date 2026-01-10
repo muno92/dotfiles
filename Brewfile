@@ -19,7 +19,6 @@ if RUBY_PLATFORM.downcase.include?('darwin')
     brew "grep"
     brew "pam-reattach"
     brew "pstree"
-    brew "ruby"
     brew "teamookla/speedtest/speedtest"
     cask "alacritty"
     cask "alfred"
