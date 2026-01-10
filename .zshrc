@@ -34,7 +34,10 @@ zle -N peco-cdr
 bindkey '^Y' peco-cdr
 
 # 便利ツール
+eval "$(mise activate zsh)"
 eval "$(direnv hook zsh)"
+
+export MISE_GLOBAL_CONFIG_FILE="${HOME}/workspace/dotfiles/.config/mise/config.toml"
 
 # historyを見やすくする
 export SAVEHIST=1000
