@@ -34,7 +34,6 @@ zle -N peco-cdr
 bindkey '^Y' peco-cdr
 
 # 便利ツール
-export PATH="$HOME/.asdf/shims/:$PATH"
 eval "$(direnv hook zsh)"
 
 # historyを見やすくする

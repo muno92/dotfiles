@@ -30,7 +30,6 @@ end
 brew "act"
 brew "alp"
 brew "asciinema"
-brew "asdf"
 brew "bat"
 brew "cloudflared"
 brew "pkg-config"
