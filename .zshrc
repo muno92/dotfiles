@@ -2,6 +2,7 @@ IS_MAC='false'
 if [[ $(uname) == 'Linux' ]]; then
     # brew --prefixは実行に時間が掛かるので固定値で持つ
     BREW_PREFIX='/home/linuxbrew/.linuxbrew'
+    export HOMEBREW_FORBIDDEN_FORMULAE='curl p11-kit'
 else
     BREW_PREFIX='/opt/homebrew'
     IS_MAC='true'
