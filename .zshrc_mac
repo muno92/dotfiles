@@ -9,3 +9,11 @@ alias date='gdate'
 
 # 1password CLIとGitHub CLIを連携
 # source ~/.config/op/plugins.sh
+
+function preset_git_sign_passphrase () {
+    gpg-connect-agent /bye &> /dev/null
+    eval $(op signin)
+    env GPG_PASSPHRASE="op://Personal/Git GPG Passphrases/password" op run --no-masking -- printenv GPG_PASSPHRASE | /opt/homebrew/opt/gnupg/libexec/gpg-preset-passphrase --preset 37FFCC7E610959633E1CAAF801C0718493B98CDF
+}
+
+preset_git_sign_passphrase
