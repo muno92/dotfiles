@@ -17,8 +17,16 @@ function preset_git_sign_passphrase () {
     fi
 
     gpg-connect-agent /bye &> /dev/null
-    eval $(op signin)
-    env GPG_PASSPHRASE="op://Personal/Git GPG Passphrases/password" op run --no-masking -- printenv GPG_PASSPHRASE | /opt/homebrew/opt/gnupg/libexec/gpg-preset-passphrase --preset 9B593014FB1C4320E8C61D7C348816E54CEE73E7
+
+    # 1Password CLIがログインに失敗した場合、無限に待たされないようにする
+    local signin_output
+    signin_output=$(timeout 5 op signin 2>/dev/null)
+    if [[ $? -ne 0 ]]; then
+        echo "op signin failed or timed out" >&2
+        return 1
+    fi
+    eval "$signin_output"
+    env GPG_PASSPHRASE="op://Personal/Git GPG Passphrases/password" op run --no-masking -- printenv GPG_PASSPHRASE | /opt/homebrew/opt/gnupg/libexec/gpg-preset-passphrase --preset 37FFCC7E610959633E1CAAF801C0718493B98CDF
 }
 
 preset_git_sign_passphrase
