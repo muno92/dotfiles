@@ -20,7 +20,7 @@ function preset_git_sign_passphrase () {
 
     # 1Password CLIがログインに失敗した場合、無限に待たされないようにする
     local signin_output
-    signin_output=$(timeout 5 op signin 2>/dev/null)
+    signin_output=$(timeout 10 op signin 2>/dev/null)
     if [[ $? -ne 0 ]]; then
         echo "op signin failed or timed out" >&2
         return 1
