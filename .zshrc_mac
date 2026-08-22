@@ -29,4 +29,7 @@ function preset_git_sign_passphrase () {
     env GPG_PASSPHRASE="op://Personal/Git GPG Passphrases/password" op run --no-masking -- printenv GPG_PASSPHRASE | /opt/homebrew/opt/gnupg/libexec/gpg-preset-passphrase --preset 37FFCC7E610959633E1CAAF801C0718493B98CDF
 }
 
+# PHPのビルドに必要なbison3系が優先して使われるようにする
+export PATH="/opt/homebrew/opt/bison/bin:$PATH"
+
 preset_git_sign_passphrase
