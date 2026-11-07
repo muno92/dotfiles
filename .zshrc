@@ -119,3 +119,4 @@ export ANDROID_HOME="${HOME}/Library/Android/sdk"
 
 export PATH="${HOME}/workspace/my-marp/bin:$PATH"
 export PATH="${BREW_PREFIX}/opt/ruby/bin:$PATH"
+export PATH="${HOME}/.composer/vendor/bin:$PATH"
